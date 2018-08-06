@@ -1,0 +1,454 @@
+/*Thanks to codePen for the inspiration/help! */
+
+/*Name title*/
+#title
+{
+    position: relative;
+    top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 56px;
+}
+
+/* for second slideshow*/
+.secondRow{
+ padding: 290px 0px 0px 0px;
+}
+
+.minorHeader{
+	font-size: 21px;
+	line-height: 0.7;
+}
+
+.site {
+ text-decoration: none;
+ color: white;
+ 
+}
+.rowDesc{
+	margin-left: 5px;
+	list-style-type: none;
+	font-weight: 300;
+	width: 350px;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.header{
+    font-size: 30px;
+}
+
+.desc
+{
+    position: relative;
+    color: #F7F7F7;
+    top: 20px;
+    text-align: center;
+    font-size: 26px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /*line-height: 6px;*/
+    
+}
+
+h4{
+ font-size: 15px; 
+}
+
+.left
+{
+  overflow: auto;
+  display: block;
+  /*margin-left: 0;*/
+  width: 29%;
+  margin: 1% 0 1% 2%;
+  /*margin-top: 0px; */
+  float: left; 
+  padding: 2%; 
+  /*font-size: 100px;*/
+  /*border: 5px;*/
+}
+
+.right{
+ display: block;
+ /*margin: 1% -13% 1% 2%;*/
+ padding: 2%;
+ /*width: 22%;*/
+ overflow: auto;
+}
+
+.middle
+{
+  overflow: auto;
+  float: left;
+  padding: 2%;
+  display: block;
+  width: 30%;
+  /*margin: 1% 0 1% 40%;*/
+}
+
+
+/*stars*/
+
+#layers {
+	height: 200px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+}
+
+#layers .layer {
+	background-size: auto 100%;
+	background-position: 50% 0;
+	background-repeat: repeat-x;
+	height: 200px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	width: 200vw;
+}
+
+@keyframes twinkle {
+	from { opacity: .3; }
+	to { opacity: 1; }
+}
+
+@keyframes layer-1 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-689px, 0, 0); }
+}
+#layers .layer:nth-child(1) {
+	animation: twinkle 10s ease-in -5s infinite alternate, layer-1 344s linear infinite;
+	background-image: url('http://imgur.com/9beLKl9.png');
+}
+
+@keyframes layer-2 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-699px, 0, 0); }
+}
+#layers .layer:nth-child(2) {
+	animation: twinkle 3s ease-in -3s infinite alternate, layer-2 349s linear infinite;
+	background-image: url('http://imgur.com/46MRYFa.png');
+}
+
+@keyframes layer-3 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-699px, 0, 0); }
+}
+#layers .layer:nth-child(3) {
+	animation: twinkle 3.5s ease-in infinite alternate, layer-3 349s linear infinite;
+	background-image: url('http://imgur.com/46MRYFa.png');
+}
+
+@keyframes layer-4 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-480px, 0, 0); }
+}
+#layers .layer:nth-child(4) {
+	animation: twinkle 4s ease-in -2s infinite alternate, layer-4 240s linear infinite;
+	background-image: url('http://imgur.com/BqkETyl.png');
+}
+
+@keyframes layer-5 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-486px, 0, 0); }
+}
+#layers .layer:nth-child(5) {
+	animation: twinkle 5.5s ease-in infinite alternate, layer-5 243s linear infinite;
+	background-image: url('http://imgur.com/x1GB77K.png');
+}
+
+@keyframes shooting-star {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate3d(-270px, 180px, 0);
+	}
+}
+
+#layers:before {
+	animation: 500ms linear 2s shooting-star;
+	background-image: url('http://imgur.com/ilhrli3.png');
+	background-size: 72px 50px;
+	content: ' ';
+	height: 50px;
+	left: 80%;
+	position: absolute;
+	top: -50px;
+	width: 72px;
+	z-index: 100;
+}
+
+
+/*background stuff*/
+body {
+	width: 100%;
+	height: 100%;
+	color: white;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	font-family: 'Lato', sans-serif;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/*Slideshow ONE*/
+
+
+
+
+.slideshow {
+  list-style: none;
+  z-index: 1;
+}
+
+.slideshow li span {
+  width: 22%;
+  height: 38%;
+  position: absolute;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: imageAnimation 24s linear infinite 0s;
+  -moz-animation: imageAnimation 24s linear infinite 0s;
+  animation: imageAnimation 24s linear infinite 0s;
+}
+
+.slideshow li h3 {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  font-size: 2em;
+  font-family: 'roboto', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-animation: titleAnimation 24s linear 1 0s;
+  -moz-animation: titleAnimation 24s linear 1 0s;
+  animation: titleAnimation 24s linear 1 0s;
+}
+@media only screen and (min-width: 768px) {
+
+.slideshow li h3 {
+  bottom: 30px;
+  font-size: 2em;
+}
+}
+@media only screen and (min-width: 1024px) {
+
+.slideshow li h3 { font-size: 2em; }
+}
+
+.slideshow li:nth-child(1) span { background-image: url(besties.png); }
+
+.slideshow li:nth-child(2) span {
+  background-image: url(white.png);
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.slideshow li:nth-child(3) span {
+  background-image: url(chair.png);
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.slideshow li:nth-child(4) span {
+  background-image: url(phone.png);
+  -webkit-animation-delay: 18s;
+  -moz-animation-delay: 18s;
+  animation-delay: 18s;
+}
+ @-webkit-keyframes 
+imageAnimation {  0% {
+ opacity: 0;
+ -webkit-animation-timing-function: ease-in;
+}
+ 12.5% {
+ opacity: 1;
+ -webkit-animation-timing-function: ease-out;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
+@-moz-keyframes 
+imageAnimation {  0% {
+ opacity: 0;
+ -moz-animation-timing-function: ease-in;
+}
+ 12.5% {
+ opacity: 1;
+ -moz-animation-timing-function: ease-out;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
+@keyframes 
+imageAnimation {  0% {
+ opacity: 0;
+ -webkit-animation-timing-function: ease-in;
+ -moz-animation-timing-function: ease-in;
+ animation-timing-function: ease-in;
+}
+ 12.5% {
+ opacity: 1;
+ -webkit-animation-timing-function: ease-out;
+ -moz-animation-timing-function: ease-out;
+ animation-timing-function: ease-out;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
+@-webkit-keyframes 
+titleAnimation {  0% {
+ opacity: 0;
+}
+ 12.5% {
+ opacity: 1;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
+@-moz-keyframes 
+titleAnimation {  0% {
+ opacity: 0;
+}
+ 12.5% {
+ opacity: 1;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
+@keyframes 
+titleAnimation {  0% {
+ opacity: 0;
+}
+ 12.5% {
+ opacity: 1;
+}
+ 25% {
+ opacity: 1;
+}
+ 37.5% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
+
+.no-cssanimations .slideshow li span { opacity: 1; }
+
+.slideshow li:nth-child(5) span { background-image: url(Group.png); width: 125px; height: 250px;}
+
+.slideshow li:nth-child(6) span {
+  background-image: url(oneMan.png); width: 120px; height: 250px;
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  animation-delay: 8s;
+}
+
+.slideshow li:nth-child(7) span {
+  background-image: url(chicktech.png); width: 120px; height: 250px;
+  -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  animation-delay: 16s;
+}
+
+.slideshow li:nth-child(8) span {
+  background-image: url(connectED.png); width: 120px; height: 250px;
+  -webkit-animation-delay: 24s;
+  -moz-animation-delay: 24s;
+  animation-delay: 24s;
+}
